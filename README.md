@@ -1,17 +1,10 @@
-![Azure Functions + Python HTTP](http://mediarealm.com.au/wp-content/uploads/2016/05/Azure-Functions-Python-HTTP.png)
+# Azure Functions + Node 
+This repository contains code is designed to demonstrate how to use Azure Functions with Node.js for both Blob Storage and HTTP Triggers. Both functions take a photo as input and output a caption to describe what is in that image.
 
-# Azure Functions + Python HTTP Example Code
-*Example code and helper class for Azure Functions (written in Python).*
+## Blob Storage Triggered Function
+This function takes input to a Blob Storage account table named input. When any file is uploaded to the blob storage account in the input table, this function is automatically triggered, gets the url of the image hosted in Blob Storage, and sends that to Cognitive Services to analyze the image.
 
-This example code is designed to demonstrate how to use Azure Functions with Python for HTTP Triggers. It demonstrates:
+The results are written out to the outTable inside of an Azure Table Storage account.
 
-* Receiving GET (Query String) data
-* Receiving POST data
-* Sending HTTP Response Status Codes
-* Sending body response data
-* Sending arbitrary HTTP response headers
-* Viewing all system environmental variables
-
-Included is a simple HTTP Helper Class to parse the input data. This should make code changes easier when the Azure Functions team introduce a new interface for Python.
-
-See also: http://mediarealm.com.au/articles/2016/05/azure-functions-python-http-example-code/
+## HTTP Triggered Function
+This function acts as an HTTP endpoint. Send a post request with the body format `{"name": "[ENTER PICTURE URL HERER]"}` to trigger this function. The photo will be sent to Cognitive Services to be analyzed and then the results will be returned.
