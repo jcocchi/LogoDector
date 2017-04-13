@@ -1,0 +1,22 @@
+{
+  "name": "compvision",
+  "version": "1.0.0",
+  "description": "This is an Azure Function to call the cognitive services computer vision API",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jcocchi/LogoDector.git"
+  },
+  "author": "Justine",
+  "license": "UNLICENSED",
+  "bugs": {
+    "url": "https://github.com/jcocchi/LogoDector/issues"
+  },
+  "homepage": "https://github.com/jcocchi/LogoDector#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
+}

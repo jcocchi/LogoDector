@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/jcocchi/LogoDector/issues"
   },
-  "homepage": "https://github.com/jcocchi/LogoDector#readme"
+  "homepage": "https://github.com/jcocchi/LogoDector#readme",
+  "dependencies": {
+    "request": "^2.81.0"
+  }
 }
